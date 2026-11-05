@@ -1,7 +1,21 @@
 # Ex.No-3b-DATA PREPROCESSING
+
 ## Aim
 To perform data preprocessing on a dataset using Python and Scikit-learn by handling missing values, encoding categorical data, splitting the dataset, and applying feature scaling. 
-## Procedure
+
+# Introduction
+Data Preprocessing is an essential step in data analytics and machine learning. Raw datasets may contain missing values, categorical variables, and features with different numerical scales. Preprocessing transforms the raw dataset into a clean and suitable format for machine learning algorithms.
+
+The major preprocessing operations performed in this experiment are:
+
+Handling missing values
+Encoding categorical variables
+One-Hot Encoding
+Encoding the dependent variable
+Splitting the dataset
+Feature scaling
+
+# Procedure
 1.	Import the required Python libraries. 
 2.	Mount Google Drive and load the dataset using Pandas. 
 3.	Display the first few records of the dataset. 
@@ -70,6 +84,62 @@ x_test = sc_x.transform(x_test)
 print(x_train)
 print(x_test)
 
-## Conclusion
-Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
+## Key concepts
+Missing Value Handling
+Missing numerical values can negatively affect machine learning algorithms. SimpleImputer replaces missing values with the mean of the corresponding feature.
 
+Label Encoding
+Label Encoding converts categorical values into numerical labels. For example:
+
+France  → 0
+Germany → 1
+Spain   → 2
+One-Hot Encoding
+One-Hot Encoding represents categorical values using separate binary columns. This prevents machine learning algorithms from assuming an artificial numerical relationship between categories.
+
+Train-Test Split
+The dataset is divided into:
+
+Training Set – 80%: Used to train the machine learning model.
+Testing Set – 20%: Used to evaluate the model's performance on unseen data.
+Feature Scaling
+Feature scaling ensures that features with different numerical ranges contribute appropriately to machine learning algorithms.
+
+StandardScaler performs standardization using:
+
+[ z = \frac{x-\mu}{\sigma} ]
+
+where:
+
+x = original feature value
+μ = mean of the feature
+σ = standard deviation of the feature
+z = standardized value
+
+## Pre-processing workflow
+Raw Dataset
+     ↓
+Load Dataset
+     ↓
+Inspect Dataset
+     ↓
+Separate X and Y
+     ↓
+Handle Missing Values
+     ↓
+Encode Categorical Data
+     ↓
+One-Hot Encoding
+     ↓
+Encode Target Variable
+     ↓
+Train-Test Split
+     ↓
+Feature Scaling
+     ↓
+Preprocessed Dataset
+     ↓
+Machine Learning
+
+## Result
+Thus, the given dataset was successfully preprocessed using Python and Scikit-learn by handling missing values, encoding categorical variables, applying One-Hot Encoding, encoding the dependent variable, splitting the dataset into training and testing sets, and performing feature scaling. The resulting preprocessed data is suitable for further data analysis and machine learning model development.
